@@ -1,0 +1,13 @@
+{
+    "name": "simon/wakanow",
+    "description": "wakanow recruitment test api",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Simon Moses",
+            "email": "syflex360@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
