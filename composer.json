@@ -8,6 +8,10 @@
             "email": "syflex360@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
     "require": {}
 }
