@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8e9aa642242a05da8d244fe0b5a814aecb41b7f3',
+    'reference' => '018166f6acefe026ea2747ca2e2c5d991aad7518',
     'name' => 'simon/wakanow',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8e9aa642242a05da8d244fe0b5a814aecb41b7f3',
+      'reference' => '018166f6acefe026ea2747ca2e2c5d991aad7518',
     ),
   ),
 );

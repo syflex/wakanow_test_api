@@ -7,9 +7,9 @@ use app\app\Router;
 
 class Application {
 
-    public $router;
+    public Router $router;
 
-    public function __destruct()
+    public function __construct()
     {
         $this->router = new Router;
     }
