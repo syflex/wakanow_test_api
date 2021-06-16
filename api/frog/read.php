@@ -29,6 +29,7 @@
 
       $frog_item = array(
         'id' => $id,
+        'number' => $number,
         'color' => $color,
         'weight' => $weight,
         'length' => $length,

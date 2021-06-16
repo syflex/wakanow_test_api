@@ -5,6 +5,7 @@
     private $table = 'frog';
 
     // Frog Properties
+    public $number;
     public $color;
     public $weight;
     public $length;
@@ -37,9 +38,9 @@
     // Get Single Frog
     public function read_single() {
           // raed query
-          $query = 'SELECT * FROM ' . $this->table . '
+          $query = 'SELECT * FROM ' . $this->table . 'f
                                     WHERE
-                                      frog.id = ?
+                                      f.id = ?
                                     LIMIT 0,1';
 
           // Prepare statement
@@ -54,6 +55,7 @@
           $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
           // Set properties
+          $this->number = $row['number'];
           $this->colore = $row['colore'];
           $this->weight = $row['weight'];
           $this->length = $row['length'];
@@ -66,12 +68,13 @@
     // Create Frog
     public function create() {
           // Create query
-          $query = 'INSERT INTO ' . $this->table . ' SET color = :color, weight = :weight,  length = :length,  width = :width, sex = :sex, live_cycle = :live_cycle,  description = :description';
+          $query = 'INSERT INTO ' . $this->table . ' SET number = :number, color = :color, weight = :weight,  length = :length,  width = :width, sex = :sex, live_cycle = :live_cycle,  description = :description';
 
           // Prepare statement
           $stmt = $this->conn->prepare($query);
 
           // Clean data
+          $this->number = htmlspecialchars(strip_tags($this->number));
           $this->color = htmlspecialchars(strip_tags($this->color));
           $this->weight = htmlspecialchars(strip_tags($this->weight));
           $this->length = htmlspecialchars(strip_tags($this->length));
@@ -81,6 +84,7 @@
           $this->description = htmlspecialchars(strip_tags($this->description));
 
           // Bind data
+          $stmt->bindParam(':number', $this->number);
           $stmt->bindParam(':color', $this->color);
           $stmt->bindParam(':weight', $this->weight);
           $stmt->bindParam(':length', $this->length);
@@ -92,7 +96,7 @@
           // Execute query
           if($stmt->execute()) {
             return true;
-      }
+          }
 
       // Print error if something goes wrong
       printf("Error: %s.\n", $stmt->error);

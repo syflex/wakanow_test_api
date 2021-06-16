@@ -21,6 +21,7 @@
   // Set ID to update
   $frog->id = $data->id;
 
+  $frog->number = $data->number;
   $frog->color = $data->color;
   $frog->weight = $data->weight;
   $frog->length = $data->length;

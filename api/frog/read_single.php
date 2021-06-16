@@ -22,6 +22,7 @@
   // Create array
   $frog_arr = array(
     'id' => $frog->id,
+    'number' => $frog->number,
     'color' => $frog->color,
     'weight' => $frog->weight,
     'length' => $frog->length,

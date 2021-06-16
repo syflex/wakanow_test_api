@@ -18,6 +18,7 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
+  $frog->number = $data->number;
   $frog->color = $data->color;
   $frog->weight = $data->weight;
   $frog->length = $data->length;
